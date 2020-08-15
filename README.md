@@ -24,7 +24,7 @@ t-entrust 是封装了事件委托的一个简单插件，配合 `data-` 自定�
 添加监听器：
 
 ```javascript
-import Entrust from './entrust'
+import Entrust from './tentrust'
 
 // 通过指定 id 来表示要添加的 dom元素
 let wrap = new Entrust('wrap')
