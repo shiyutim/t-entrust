@@ -8,7 +8,7 @@ t-entrust 是封装了事件委托的一个简单插件，配合 `data-` 自定�
 
 如果使用事件委托，甚至就可以添加一个监听器来完成监听的操作
 ## 使用
-在 html 中，使用了 `data-entrust` 来定义要监听的 dom，以及指定对应的操作
+在 html 中，使用 `data-entrust` 来定义要监听的 dom，以及指定对应的操作
 ```javascript
 // 通过 data-entrust 指定要操作的 dom
 // data-entrust 的值表示你要做什么操作
@@ -71,8 +71,8 @@ let wrap = new Entrust('wrap').listen('click', e => {
 
 上面通过使用 `getName`来指定了 `button` 标签，内部使用 `closest` 寻找这个标签的祖先元素，这样设置可以方便寻找设定的操作。
 
-建议在使用 `getName` 的时候，指定标签名称。
+**建议在使用 `getName` 的时候，指定标签名称**。
 
 
 ## 注意
-**目前**插件使用了 es6 的 `class` 方法，所以不经过 `bable` 打包的项目需要注意浏览器兼容的问题
+**目前**插件使用了 es6 的 `class` 方法，所以不经过 `bable` 打包的项目需要注意浏览器兼容性的问题
