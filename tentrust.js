@@ -41,4 +41,4 @@ class Entrust {
 	}
 }
 
-export default Entrust
+// export default Entrust

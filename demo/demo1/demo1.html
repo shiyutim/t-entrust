@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>demo1</title>
+</head>
+<body  id="wrap">
+    <main>
+        <h1>t-entrust demo1</h1>
+        <section>
+            <button data-entrust="add">add</button>
+            <button data-entrust="del">del</button>
+        </section>
+    </main>
+
+<script src="../../tentrust.js" ></script>
+<script>
+let wrap = new Entrust('wrap').listen('click', e => {
+    let handleName = wrap.getName(e, 'button')
+    switch(handleName) {
+        case 'add':
+            add()
+            break;
+    }
+})
+
+function add() {
+    console.log('add')
+}
+
+function del() {}
+</script>
+</body>
+</html>
