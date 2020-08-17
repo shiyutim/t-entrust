@@ -41,4 +41,4 @@ class TEntrust {
 	}
 }
 
-window.TEntrust = TEntrust
+export default TEntrust

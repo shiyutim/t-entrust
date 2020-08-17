@@ -5,28 +5,49 @@
 <body  id="wrap">
     <main>
         <h1>t-entrust demo1</h1>
+        <ul class="todo-list">
+        </ul>
         <section>
             <button data-entrust="add">add</button>
             <button data-entrust="del">del</button>
         </section>
     </main>
 
-<script src="../../tentrust.js" ></script>
+<script src="../../dist/tentrust.js" ></script>
 <script>
-let wrap = new Entrust('wrap').listen('click', e => {
-    let handleName = wrap.getName(e, 'button')
-    switch(handleName) {
-        case 'add':
-            add()
-            break;
-    }
+let wrap = new TEntrust("wrap").listen("click", e => {
+	let handleName = wrap.getName(e, "button")
+	switch (handleName) {
+		case "add":
+			add()
+			break
+		case "del":
+			del()
+			break
+		default:
+			break
+	}
 })
 
 function add() {
-    console.log('add')
+	const ul = document.querySelector(".todo-list")
+	let tag = document.createElement("li")
+	let random = Math.ceil(Math.random() * 100)
+	tag.textContent = "li-".concat(random)
+	ul.append(tag)
 }
 
-function del() {}
+function del() {
+	const ul = document.querySelector(".todo-list")
+	const length = ul.children.length
+	if (!length) return
+	ul.removeChild(ul.lastChild)
+}
+
+window.onunload = function (event) {
+	wrap.distory()
+}
+
 </script>
 </body>
 </html>
