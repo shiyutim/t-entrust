@@ -1,15 +1,15 @@
 {
 	"name": "t-entrust",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
-	"main": "index.js",
+	"main": "dist/tentrust.module.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "NODE_ENV=production webpack"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "shiyutim",
+	"license": "MIT",
 	"devDependencies": {
 		"babel-core": "^6.26.3",
 		"babel-loader": "^7.1.5",

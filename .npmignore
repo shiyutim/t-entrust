@@ -1,0 +1,7 @@
+node_modules/
+demo/
+.vscode/
+.gitignore
+tentrust.js
+tentrust.module.js
+webpack.config.js
