@@ -41,5 +41,4 @@ class TEntrust {
 	}
 }
 
-// export default TEntrust
-module.exports = Tentrust
+module.exports = TEntrust
