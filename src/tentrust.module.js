@@ -20,6 +20,7 @@ class TEntrust {
 		return this
 	}
 	getName(e, currnetTagName) {
+		if (!e) throw new Error("event is not defined")
 		let current, currentEntrust
 		if (currnetTagName) {
 			current = e.target.closest(currnetTagName)
@@ -41,5 +42,4 @@ class TEntrust {
 	}
 }
 
-// export default TEntrust
-module.exports = Tentrust
+export default TEntrust
