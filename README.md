@@ -34,10 +34,8 @@ let wrap = new TEntrust("wrap") // 使用 wrap 而不是 #wrap
 -   首先给要监听的**父元素**定义 id
 -   给 button 按钮添加了一个自定义属性，并赋值为 `copy`
 
-具体逻辑：
-
 ```js
-let wrap = new Entrust("wrap")
+let wrap = new TEntrust("wrap")
 // listen 第一个参数为要监听的事件
 // 第二个参数为 回调函数，该回调函数的参数为默认的 event
 // 通过 getName函数 来获取响应的操作
@@ -46,6 +44,19 @@ let wrap = new Entrust("wrap")
 wrap.listen("click", e => {
 	let copy = wrap.getName(e, "button")
 	// do somethings
+})
+```
+
+ 对于经常使用的监听方式，如：click ，默认提供了几个函数可以简化操作：
+
+-   click
+-   mousemove
+-   scroll
+
+```js
+let wrap = new TEntrust("wrap")
+wrap.click(e => {
+	// do something
 })
 ```
 

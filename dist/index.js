@@ -51,6 +51,21 @@ var TEntrust = function () {
 			return this;
 		}
 	}, {
+		key: "click",
+		value: function click(callback) {
+			return this.listen("click", callback);
+		}
+	}, {
+		key: "mousemove",
+		value: function mousemove(callback) {
+			return this.listen("mousemove", callback);
+		}
+	}, {
+		key: "scroll",
+		value: function scroll(callback) {
+			return this.listen("scroll", callback);
+		}
+	}, {
 		key: "getName",
 		value: function getName(e, currnetTagName) {
 			var current = void 0,
