@@ -49,7 +49,7 @@ class TEntrust {
 		return currentEntrust || null
 	}
 
-	destory() {
+	destroy() {
 		this.$el.removeEventListener(this.event, this.callback)
 	}
 }

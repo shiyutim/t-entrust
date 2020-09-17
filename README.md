@@ -63,5 +63,5 @@ wrap.click(e => {
 移除监听器：
 
 ```js
-wrap.destory()
+wrap.destroy()
 ```

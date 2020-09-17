@@ -85,8 +85,8 @@ var TEntrust = function () {
 			return currentEntrust || null;
 		}
 	}, {
-		key: "destory",
-		value: function destory() {
+		key: "destroy",
+		value: function destroy() {
 			this.$el.removeEventListener(this.event, this.callback);
 		}
 	}]);
