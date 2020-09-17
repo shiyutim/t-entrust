@@ -13,21 +13,35 @@
         </section>
     </main>
 
-<script src="../../dist/tentrust.js" ></script>
+<script src="../../src/tentrust.js" ></script>
 <script>
-let wrap = new TEntrust("wrap").listen("click", e => {
-	let handleName = wrap.getName(e, "button")
-	switch (handleName) {
-		case "add":
-			add()
-			break
-		case "del":
-			del()
-			break
-		default:
-			break
-	}
-})
+	// 简化后的版本
+	let wrap = new TEntrust('wrap').click(e => {
+		let handleName = wrap.getName(e, "button")
+		switch (handleName) {
+			case "add":
+				add()
+				break
+			case "del":
+				del()
+				break
+			default:
+				break
+		}
+	})
+// let wrap = new TEntrust("wrap").listen("click", e => {
+// 	let handleName = wrap.getName(e, "button")
+// 	switch (handleName) {
+// 		case "add":
+// 			add()
+// 			break
+// 		case "del":
+// 			del()
+// 			break
+// 		default:
+// 			break
+// 	}
+// })
 
 function add() {
 	const ul = document.querySelector(".todo-list")
@@ -45,7 +59,7 @@ function del() {
 }
 
 window.onunload = function (event) {
-	wrap.distory()
+	wrap.destroy()
 }
 
 </script>

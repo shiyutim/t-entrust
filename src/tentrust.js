@@ -19,6 +19,19 @@ class TEntrust {
 		this.$el.addEventListener(this.event, callback)
 		return this
 	}
+
+	click(callback) {
+		return this.listen("click", callback)
+	}
+
+	mousemove(callback) {
+		return this.listen("mousemove", callback)
+	}
+
+	scroll(callback) {
+		return this.listen("scroll", callback)
+	}
+
 	getName(e, currnetTagName) {
 		let current, currentEntrust
 		if (currnetTagName) {
@@ -36,7 +49,7 @@ class TEntrust {
 		return currentEntrust || null
 	}
 
-	destory() {
+	destroy() {
 		this.$el.removeEventListener(this.event, this.callback)
 	}
 }

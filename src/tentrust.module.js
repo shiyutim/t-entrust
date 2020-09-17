@@ -19,8 +19,20 @@ class TEntrust {
 		this.$el.addEventListener(this.event, callback)
 		return this
 	}
+
+	click(callback) {
+		return this.listen("click", callback)
+	}
+
+	mousemove(callback) {
+		return this.listen("mousemove", callback)
+	}
+
+	scroll(callback) {
+		return this.listen("scroll", callback)
+	}
+
 	getName(e, currnetTagName) {
-		if (!e) throw new Error("event is not defined")
 		let current, currentEntrust
 		if (currnetTagName) {
 			current = e.target.closest(currnetTagName)
@@ -37,7 +49,7 @@ class TEntrust {
 		return currentEntrust || null
 	}
 
-	destory() {
+	destroy() {
 		this.$el.removeEventListener(this.event, this.callback)
 	}
 }
